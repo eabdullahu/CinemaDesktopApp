@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainhomepane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" stylesheets="styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.View.ViewFilmsSceneController">
+   <children>
+      <AnchorPane fx:id="leftpane" prefHeight="700.0" prefWidth="250.0" style="-fx-background-color: #182131;">
+         <children>
+            <JFXButton fx:id="homebtn" alignment="TOP_LEFT" graphicTextGap="20.0" layoutX="10.0" layoutY="130.0" onAction="#loadScene" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="40.0" prefWidth="230.0" text="Home" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="HOME" size="20" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            
+            <JFXButton fx:id="cinemabtn" alignment="TOP_LEFT" graphicTextGap="20.0" layoutX="10.0" layoutY="180.0" onAction="#loadScene" onMouseEntered="#btnHover" onMouseExited="#btnExit" opacity="0.8" prefHeight="40.0" prefWidth="230.0" text="Cinemas" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="THEATER" size="20" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="hallsbtn" alignment="TOP_LEFT" graphicTextGap="20.0" layoutX="10.0" layoutY="230.0" onAction="#loadScene" onMouseEntered="#btnHover" onMouseExited="#btnExit" opacity="0.8" prefHeight="40.0" prefWidth="230.0" text="Halls" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="DOMAIN" size="20" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="moviesbtn" alignment="TOP_LEFT" graphicTextGap="20.0" layoutX="10.0" layoutY="280.0" onAction="#loadScene" onMouseEntered="#btnHover" onMouseExited="#btnExit" opacity="0.8" prefHeight="40.0" prefWidth="230.0" text="Movies" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="MOVIE" size="20" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            
+            <!-- add ticket, admini -->
+            
+            <JFXButton fx:id="ticketsbtn" alignment="TOP_LEFT" graphicTextGap="20.0" layoutX="10.0" layoutY="330.0" onAction="#loadScene" onMouseEntered="#btnHover" onMouseExited="#btnExit" opacity="0.8" prefHeight="40.0" prefWidth="230.0" text="Tickets" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="TICKET" size="20" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="usersbtn" alignment="TOP_LEFT" graphicTextGap="20.0" layoutX="10.0" layoutY="380.0" onAction="#loadScene" onMouseEntered="#btnHover" onMouseExited="#btnExit" opacity="0.8" prefHeight="40.0" prefWidth="230.0" text="Users" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="ACCOUNT_CIRCLE" size="20" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            
+            <!-- add ticket, admini -->
+            
+            <JFXButton fx:id="contactbtn" alignment="TOP_LEFT" graphicTextGap="20.0" layoutX="10.0" layoutY="430.0" onAction="#loadScene" onMouseEntered="#btnHover" onMouseExited="#btnExit" opacity="0.8" prefHeight="40.0" prefWidth="230.0" text="Contact" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="CONTACT_MAIL" size="20" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="editProfileBtn" alignment="TOP_LEFT" graphicTextGap="20.0" layoutX="10.0" layoutY="480.0" onMouseEntered="#btnHover" onMouseExited="#btnExit" opacity="0.8" prefHeight="40.0" prefWidth="230.0" text="Edit profile" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="ACCOUNT_CIRCLE" size="20" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="logoutbtn" alignment="TOP_LEFT" graphicTextGap="20.0" layoutX="10.0" layoutY="530.0" onAction="#logOut" onMouseEntered="#btnHover" onMouseExited="#btnExit" opacity="0.8" prefHeight="40.0" prefWidth="230.0" text="Log Out" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="POWER" size="20" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            
+            <Label layoutX="25.0" layoutY="29.0" text="Movie booking system" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Line endX="230.0" fill="WHITE" layoutX="10.0" layoutY="60.0" opacity="0.85" stroke="WHITE" strokeLineCap="ROUND" />
+            <Label fx:id="userlabel" graphicTextGap="10.0" layoutX="20.0" layoutY="600.0" text="Logged in as: Enis Abdullahu" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="ACCOUNT_CIRCLE" size="20" />
+               </graphic>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="250.0" prefHeight="700.0" prefWidth="950.0">
+         <children>
+            <AnchorPane fx:id="toppane" prefHeight="35.0" prefWidth="950.0" style="-fx-background-color: #182131;">
+               <children>
+                  <Label layoutX="350.0" layoutY="5.0" text="Dashboard" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="HOME" size="20" />
+                     </graphic>
+                  </Label>
+                  <HBox layoutX="880.0" prefHeight="35.0">
+                     <children>
+                        <JFXButton fx:id="minimisebtn" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#minimiseWindow" prefHeight="35.0" prefWidth="35.0" ripplerFill="WHITE" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="MINUS" size="20" />
+                           </graphic>
+                           <cursor>
+                                <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="closebtn" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleClose" prefHeight="35.0" prefWidth="35.0" ripplerFill="WHITE">
+                           <graphic>
+                              <MaterialDesignIconView fill="WHITE" glyphName="CLOSE" size="24" />
+                           </graphic>
+                           <cursor>
+                                <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <ScrollPane fx:id="scrollPane" layoutX="0.0" layoutY="35.0" prefHeight="665.0" prefWidth="950.0" styleClass="edge-to-edge">
+                <content>
+                    <AnchorPane fx:id="comboBoxes" layoutX="20.0" layoutY="15.0">
+                       <children>
+                            <GridPane fx:id="slideShow" layoutX="0.0" layoutY="0.0" prefWidth="950.0" />
+                            <GridPane hgap="10" layoutX="20.0" layoutY="320.0" prefHeight="25.0" vgap="10">
+                                <ComboBox fx:id="cinemaCombo" prefHeight="25.0" prefWidth="220.0" promptText="Cinema location" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                                    <items>
+                                      <FXCollections fx:factory="observableArrayList">
+                                      </FXCollections>
+                                    </items>
+                                </ComboBox>
+                                <ComboBox fx:id="dateCombo" prefHeight="25.0" prefWidth="220.0" promptText="All dates" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                                    <items>
+                                      <FXCollections fx:factory="observableArrayList">
+                                      </FXCollections>
+                                    </items>
+                                </ComboBox>
+                                <ComboBox fx:id="movieCombo" prefHeight="25.0" prefWidth="220.0" promptText="Movie category" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                                    <items>
+                                      <FXCollections fx:factory="observableArrayList">
+                                        <String fx:value="All categories" />
+                                        <String fx:value="Action" />
+                                        <String fx:value="Comedy" />
+                                        <String fx:value="Drama" />
+                                        <String fx:value="Fantasy" />
+                                        <String fx:value="Sports" />
+                                        <String fx:value="SC-FI" />
+                                        <String fx:value="Animated" />
+                                        <String fx:value="Horror" />
+                                      </FXCollections>
+                                    </items>
+                                </ComboBox>
+                                <JFXButton fx:id="searchBtn" onAction="#searchDb" prefHeight="25.0" prefWidth="220.0" style="-fx-padding: 1 1 1 1; -fx-background-color: #ff4444; -fx-background-radius: 2;" text="Search" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="0">
+                                    <font>
+                                       <Font size="16.0" />
+                                    </font>
+                                </JFXButton>
+                           <columnConstraints>
+                              <ColumnConstraints />
+                              <ColumnConstraints />
+                              <ColumnConstraints />
+                              <ColumnConstraints />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints />
+                           </rowConstraints>
+                            </GridPane>
+                            <GridPane fx:id="grid" layoutX="20.0" layoutY="360.0" prefWidth="910.0" styleClass="tiles">
+                                <Label fx:id="titleLabel" style="-fx-padding: 0;" text="MOVIES" textFill="BLACK" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                                    <font>
+                                       <Font size="18.0" />
+                                    </font>
+                                </Label>
+                           <columnConstraints>
+                              <ColumnConstraints />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints />
+                           </rowConstraints>
+                            </GridPane>
+                            <StackPane fx:id="paginationPane" layoutX="20.0" layoutY="560.0">
+                                <children>
+                                    
+                                </children>
+                            </StackPane>
+                        </children>
+                    </AnchorPane>
+                </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

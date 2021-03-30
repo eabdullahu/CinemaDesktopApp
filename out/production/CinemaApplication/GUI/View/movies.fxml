@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.ComboBox?>
+<?import java.lang.String?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<AnchorPane fx:id="mainmoviespane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" stylesheets="styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.View.moviesController">
+   <children>
+      <AnchorPane fx:id="leftpane" prefHeight="700.0" prefWidth="250.0" style="-fx-background-color: #182131;">
+         <children>
+           <JFXButton fx:id="homebtn" alignment="TOP_LEFT" graphicTextGap="20.0" layoutX="10.0" layoutY="130.0" onAction="#loadScene" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="40.0" prefWidth="230.0" text="Home" textFill="WHITE">
+            <font>
+               <Font size="18.0" />
+            </font>
+            <graphic>
+               <MaterialDesignIconView fill="WHITE" glyphName="HOME" size="20" />
+            </graphic>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </JFXButton>
+
+         <JFXButton fx:id="cinemabtn" alignment="TOP_LEFT" graphicTextGap="20.0" layoutX="10.0" layoutY="180.0" onAction="#loadScene" onMouseEntered="#btnHover" onMouseExited="#btnExit" opacity="0.8" prefHeight="40.0" prefWidth="230.0" text="Cinemas" textFill="WHITE">
+            <font>
+               <Font size="18.0" />
+            </font>
+            <graphic>
+               <MaterialDesignIconView fill="WHITE" glyphName="THEATER" size="20" />
+            </graphic>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </JFXButton>
+         <JFXButton fx:id="hallsbtn" alignment="TOP_LEFT" graphicTextGap="20.0" layoutX="10.0" layoutY="230.0" onAction="#loadScene" onMouseEntered="#btnHover" onMouseExited="#btnExit" opacity="0.8" prefHeight="40.0" prefWidth="230.0" text="Halls" textFill="WHITE">
+            <font>
+               <Font size="18.0" />
+            </font>
+            <graphic>
+               <MaterialDesignIconView fill="WHITE" glyphName="DOMAIN" size="20" />
+            </graphic>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </JFXButton>
+         <JFXButton fx:id="moviesbtn" alignment="TOP_LEFT" graphicTextGap="20.0" layoutX="10.0" layoutY="280.0" onAction="#loadScene" onMouseEntered="#btnHover" onMouseExited="#btnExit" opacity="0.8" prefHeight="40.0" prefWidth="230.0" text="Movies" textFill="WHITE">
+            <font>
+               <Font size="18.0" />
+            </font>
+            <graphic>
+               <MaterialDesignIconView fill="WHITE" glyphName="MOVIE" size="20" />
+            </graphic>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </JFXButton>
+
+        <!-- add ticket, admini -->
+            
+            <JFXButton fx:id="ticketsbtn" alignment="TOP_LEFT" graphicTextGap="20.0" layoutX="10.0" layoutY="330.0" onAction="#loadScene" onMouseEntered="#btnHover" onMouseExited="#btnExit" opacity="0.8" prefHeight="40.0" prefWidth="230.0" text="Tickets" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="TICKET" size="20" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="usersbtn" alignment="TOP_LEFT" graphicTextGap="20.0" layoutX="10.0" layoutY="380.0" onAction="#loadScene" onMouseEntered="#btnHover" onMouseExited="#btnExit" opacity="0.8" prefHeight="40.0" prefWidth="230.0" text="Users" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="ACCOUNT_CIRCLE" size="20" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            
+            <!-- add ticket, admini -->
+            
+            <JFXButton fx:id="contactbtn" alignment="TOP_LEFT" graphicTextGap="20.0" layoutX="10.0" layoutY="430.0" onAction="#loadScene" onMouseEntered="#btnHover" onMouseExited="#btnExit" opacity="0.8" prefHeight="40.0" prefWidth="230.0" text="Contact" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="CONTACT_MAIL" size="20" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="editProfileBtn" alignment="TOP_LEFT" graphicTextGap="20.0" layoutX="10.0" layoutY="480.0" onMouseEntered="#btnHover" onMouseExited="#btnExit" opacity="0.8" prefHeight="40.0" prefWidth="230.0" text="Edit profile" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="ACCOUNT_CIRCLE" size="20" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="logoutbtn" alignment="TOP_LEFT" graphicTextGap="20.0" layoutX="10.0" layoutY="530.0" onAction="#logOut" onMouseEntered="#btnHover" onMouseExited="#btnExit" opacity="0.8" prefHeight="40.0" prefWidth="230.0" text="Log Out" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="POWER" size="20" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label layoutX="25.0" layoutY="29.0" text="Movie booking system" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Line endX="230.0" fill="WHITE" layoutX="10.0" layoutY="60.0" opacity="0.85" stroke="WHITE" strokeLineCap="ROUND" />
+            <Label fx:id="userlabel" graphicTextGap="10.0" layoutX="20.0" layoutY="600.0" text="Logged in as: Najm Dost" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="ACCOUNT_CIRCLE" size="20" />
+               </graphic>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="250.0" prefHeight="700.0" prefWidth="950.0" style="-fx-background-color: #E8E8E8;">
+         <children>
+            <AnchorPane fx:id="toppane" prefHeight="35.0" prefWidth="950.0" style="-fx-background-color: #182131;">
+               <children>
+                  <Label layoutX="350.0" layoutY="5.0" text="Movie" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="MOVIE" size="20" />
+                     </graphic>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <HBox layoutX="880.0" prefHeight="35.0">
+               <children>
+                  <JFXButton fx:id="minimisebtn" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#minimiseWindow" prefHeight="35.0" prefWidth="35.0" ripplerFill="WHITE" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="MINUS" size="20" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="closebtn" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleClose" prefHeight="35.0" prefWidth="35.0" ripplerFill="WHITE">
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="CLOSE" size="24" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <AnchorPane fx:id="tablepane" layoutX="15.0" layoutY="286.0" prefHeight="400.0" prefWidth="920.0" styleClass="tiles">
+                <children>
+                    <AnchorPane fx:id="DATE1" layoutX="15.0" layoutY="85.0" onMouseEntered="#tileHover" onMouseExited="#tileExit" prefHeight="67.5" prefWidth="110.0" style="-fx-background-color: #ff4444;" styleClass="tiles">
+                        <children>
+                            <Label fx:id="date1Label" layoutX="7.0" layoutY="20.0" text="Screen 1" textFill="WHITE">
+                                <font>
+                                    <Font size="20.0" />
+                                </font>
+                            </Label>
+                        </children>
+                    </AnchorPane>
+                    <AnchorPane fx:id="DATE2" layoutX="15.0" layoutY="162.5" onMouseEntered="#tileHover" onMouseExited="#tileExit" prefHeight="67.5" prefWidth="110.0" style="-fx-background-color: #ff4444;" styleClass="tiles">
+                        <children>
+                            <Label fx:id="date2Label" layoutX="7.0" layoutY="20.0" text="Screen 2" textFill="WHITE">
+                                <font>
+                                    <Font size="20.0" />
+                                </font>
+                            </Label>
+                        </children>
+                    </AnchorPane>
+                    <AnchorPane fx:id="DATE3" layoutX="15.0" layoutY="240.0" onMouseEntered="#tileHover" onMouseExited="#tileExit" prefHeight="67.5" prefWidth="110.0" style="-fx-background-color: #ff4444;" styleClass="tiles">
+                         <children>
+                            <Label fx:id="date3Label" layoutX="7.0" layoutY="20.0" text="Screen 3" textFill="WHITE">
+                                <font>
+                                    <Font size="20.0" />
+                                 </font>
+                            </Label>
+                        </children>
+                    </AnchorPane>
+                    <AnchorPane fx:id="DATE4" layoutX="15.0" layoutY="317.5" onMouseEntered="#tileHover" onMouseExited="#tileExit" prefHeight="67.5" prefWidth="110.0" style="-fx-background-color: #ff4444;" styleClass="tiles">
+                        <children>
+                            <Label fx:id="date4Label" layoutX="7.0" layoutY="20.0" text="Screen 4" textFill="WHITE">
+                                <font>
+                                    <Font size="20.0" />
+                                </font>
+                            </Label>
+                        </children>
+                    </AnchorPane>
+                    <AnchorPane fx:id="SLOT1" layoutX="140.0" layoutY="10.0" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #182131;" styleClass="tiles">
+                        <children>
+                            <Label layoutX="55.0" layoutY="8.0" text="16:00h" textFill="WHITE">
+                                <font>
+                                    <Font size="24.0" />
+                                </font>
+                            </Label>
+                        </children>
+                    </AnchorPane>
+                    <AnchorPane fx:id="SLOT2" layoutX="335.0" layoutY="10.0" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #182131;" styleClass="tiles">
+                        <children>
+                            <Label layoutX="55.0" layoutY="8.0" text="18:00h" textFill="WHITE">
+                               <font>
+                                  <Font size="24.0" />
+                               </font>
+                            </Label>
+                        </children>
+                    </AnchorPane>
+                    <AnchorPane fx:id="SLOT3" layoutX="530.0" layoutY="10.0" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #182131;" styleClass="tiles">
+                         <children>
+                            <Label layoutX="55.0" layoutY="8.0" text="19:45h" textFill="WHITE">
+                                <font>
+                                   <Font size="24.0" />
+                                </font>
+                            </Label>
+                        </children>
+                    </AnchorPane>
+                    <AnchorPane fx:id="SLOT4" layoutX="725.0" layoutY="10.0" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #182131;" styleClass="tiles">
+                        <children>
+                            <Label layoutX="55.0" layoutY="8.0" text="22:30h" textFill="WHITE">
+                               <font>
+                                  <Font size="24.0" />
+                               </font>
+                            </Label>
+                        </children>
+                    </AnchorPane>
+                    <Line endX="680.0" layoutX="233.0" layoutY="70.0" startX="-100.0" stroke="#ff4444" strokeWidth="1.5" />
+                    <Line endX="680.0" layoutX="233.0" layoutY="157.5" startX="-217.0" stroke="#182131" strokeWidth="0.6" />
+                    <Line endX="680.0" layoutX="233.0" layoutY="236.0" startX="-217.0" stroke="#182131" strokeWidth="0.6" />
+                    <Line endX="680.0" layoutX="233.0" layoutY="312.5" startX="-217.0" stroke="#182131" strokeWidth="0.6" />
+                    <Line endX="680.0" layoutX="233.0" layoutY="392.0" startX="-217.0" stroke="#182131" strokeMiterLimit="0.0" strokeWidth="0.6" />
+                </children>
+            </AnchorPane>
+            <AnchorPane fx:id="moviepane" layoutX="15.0" layoutY="45.0" prefHeight="229.0" prefWidth="920.0" styleClass="tiles">
+               <children>
+                  <ImageView fx:id="movieimage" fitHeight="200.0" fitWidth="150.0" layoutX="15.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" styleClass="tiles">
+                     <image>
+                        <Image url="@../../../../../../../../csunix/ll15n3d/Desktop/project/client/src/GUI/View/images/galaxy.jpg" />
+                     </image>
+                  </ImageView>
+                  <AnchorPane layoutX="175.0" layoutY="15.0" prefHeight="200.0" prefWidth="510.0" styleClass="tiles">
+                     <children>
+                        <AnchorPane prefHeight="35.0" prefWidth="510.0" style="-fx-background-color: #ff4444;">
+                           <children>
+                              <Label fx:id="movietitle" layoutX="10.0" layoutY="4.0" text="Guardians Of The Galaxy Vol 2" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <Line endX="490.0" layoutX="10.0" layoutY="70.0" stroke="#182131" strokeWidth="0.6" />
+                        <Line endX="490.0" layoutX="10.0" layoutY="110.0" stroke="#182131" strokeWidth="0.6" />
+                        <Line endX="490.0" layoutX="10.0" layoutY="150.0" stroke="#182131" strokeWidth="0.6" />
+                        <Line endX="490.0" layoutX="10.0" layoutY="190.0" stroke="#182131" strokeWidth="0.6" />
+                        <Label layoutX="20.0" layoutY="46.0" text="IMDB Rating">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="20.0" layoutY="86.0" text="Movie Duration">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="20.0" layoutY="126.0" text="Movie Category">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="20.0" layoutY="166.0" text="Showing to date">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="movierating" layoutX="250.0" layoutY="46.0" text="7.7">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="movieduration" layoutX="250.0" layoutY="86.0" text="01:56:24">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="moviecategory" layoutX="250.0" layoutY="126.0" text="9">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="movieshowingtodate" layoutX="250.0" layoutY="166.0" text="300">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <JFXButton fx:id="movieStatus" layoutX="700.0" layoutY="15.0" prefHeight="40.0" prefWidth="206.0" style="-fx-background-color: #CC752C; -fx-background-radius: 5;" text="Playing" textFill="#080a10">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="movieCinema" layoutX="700.0" layoutY="68.0" prefHeight="40.0" prefWidth="206.0" style="-fx-background-color: #ff4444; -fx-background-radius: 5;" text="Cinema" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="movieTrailer" layoutX="700.0" layoutY="120.0" prefHeight="40.0" prefWidth="206.0" style="-fx-background-color: #ff4444; -fx-background-radius: 5;" text="Trailer" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                   <JFXComboBox fx:id="hallCombo" layoutX="700.0" layoutY="172.0" onAction="#loadMovieHall" prefHeight="40.0" prefWidth="206.0" style="-fx-background-radius: 5;">
+                       <items>
+                           <FXCollections fx:factory="observableArrayList">
+                           </FXCollections>
+                       </items>
+                   </JFXComboBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

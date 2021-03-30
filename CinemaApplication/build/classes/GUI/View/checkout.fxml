@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<!-- #B8124E; -->
+
+<AnchorPane fx:id="mainpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.View.checkoutController">
+   <children>
+      <AnchorPane fx:id="leftpane" prefHeight="700.0" prefWidth="250.0" style="-fx-background-color: #182131;">
+         <children>
+            <Label layoutX="25.0" layoutY="29.0" text="Movie booking system" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Line endX="230.0" fill="WHITE" layoutX="10.0" layoutY="60.0" stroke="WHITE" strokeLineCap="ROUND" />
+            <Label fx:id="userlabel" graphicTextGap="10.0" layoutX="20.0" layoutY="600.0" text="Logged in as: Najm Dost" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="ACCOUNT_CIRCLE" size="20" />
+               </graphic>
+            </Label>
+            <JFXButton fx:id="homebtn" alignment="TOP_LEFT" graphicTextGap="20.0" layoutX="10.0" layoutY="130.0" onAction="#loadScene" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="40.0" prefWidth="230.0" text="Home" textFill="WHITE">
+            <font>
+               <Font size="18.0" />
+            </font>
+            <graphic>
+               <MaterialDesignIconView fill="WHITE" glyphName="HOME" size="20" />
+            </graphic>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </JFXButton>
+
+         <JFXButton fx:id="cinemabtn" alignment="TOP_LEFT" graphicTextGap="20.0" layoutX="10.0" layoutY="180.0" onAction="#loadScene" onMouseEntered="#btnHover" onMouseExited="#btnExit" opacity="0.8" prefHeight="40.0" prefWidth="230.0" text="Cinemas" textFill="WHITE">
+            <font>
+               <Font size="18.0" />
+            </font>
+            <graphic>
+               <MaterialDesignIconView fill="WHITE" glyphName="THEATER" size="20" />
+            </graphic>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </JFXButton>
+         <JFXButton fx:id="hallsbtn" alignment="TOP_LEFT" graphicTextGap="20.0" layoutX="10.0" layoutY="230.0" onAction="#loadScene" onMouseEntered="#btnHover" onMouseExited="#btnExit" opacity="0.8" prefHeight="40.0" prefWidth="230.0" text="Halls" textFill="WHITE">
+            <font>
+               <Font size="18.0" />
+            </font>
+            <graphic>
+               <MaterialDesignIconView fill="WHITE" glyphName="DOMAIN" size="20" />
+            </graphic>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </JFXButton>
+         <JFXButton fx:id="moviesbtn" alignment="TOP_LEFT" graphicTextGap="20.0" layoutX="10.0" layoutY="280.0" onAction="#loadScene" onMouseEntered="#btnHover" onMouseExited="#btnExit" opacity="0.8" prefHeight="40.0" prefWidth="230.0" text="Movies" textFill="WHITE">
+            <font>
+               <Font size="18.0" />
+            </font>
+            <graphic>
+               <MaterialDesignIconView fill="WHITE" glyphName="MOVIE" size="20" />
+            </graphic>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </JFXButton>
+
+        <!-- add ticket, admini -->
+            
+            <JFXButton fx:id="ticketsbtn" alignment="TOP_LEFT" graphicTextGap="20.0" layoutX="10.0" layoutY="330.0" onAction="#loadScene" onMouseEntered="#btnHover" onMouseExited="#btnExit" opacity="0.8" prefHeight="40.0" prefWidth="230.0" text="Tickets" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="TICKET" size="20" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="usersbtn" alignment="TOP_LEFT" graphicTextGap="20.0" layoutX="10.0" layoutY="380.0" onAction="#loadScene" onMouseEntered="#btnHover" onMouseExited="#btnExit" opacity="0.8" prefHeight="40.0" prefWidth="230.0" text="Users" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="ACCOUNT_CIRCLE" size="20" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            
+            <!-- add ticket, admini -->
+            
+            <JFXButton fx:id="contactbtn" alignment="TOP_LEFT" graphicTextGap="20.0" layoutX="10.0" layoutY="430.0" onAction="#loadScene" onMouseEntered="#btnHover" onMouseExited="#btnExit" opacity="0.8" prefHeight="40.0" prefWidth="230.0" text="Contact" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="CONTACT_MAIL" size="20" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="editProfileBtn" alignment="TOP_LEFT" graphicTextGap="20.0" layoutX="10.0" layoutY="480.0" onMouseEntered="#btnHover" onMouseExited="#btnExit" opacity="0.8" prefHeight="40.0" prefWidth="230.0" text="Edit profile" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="ACCOUNT_CIRCLE" size="20" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="logoutbtn" alignment="TOP_LEFT" graphicTextGap="20.0" layoutX="10.0" layoutY="530.0" onAction="#logOut" onMouseEntered="#btnHover" onMouseExited="#btnExit" opacity="0.8" prefHeight="40.0" prefWidth="230.0" text="Log Out" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="POWER" size="20" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="250.0" prefHeight="700.0" prefWidth="950.0">
+         <children>
+            <AnchorPane fx:id="selectPane" layoutX="24.0" layoutY="77.0" prefHeight="580.0" prefWidth="550.0" style="-fx-background-color: #F5F5F5;" styleClass="tiles">
+               <children>
+                  <Label alignment="CENTER" layoutX="391.0" layoutY="76.0" prefHeight="40.0" prefWidth="117.0" text="Price" textFill="#020438">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+
+                  <Label layoutX="61.0" layoutY="148.0" prefHeight="40.0" prefWidth="117.0" text="Quantity" textFill="#020438">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <JFXComboBox fx:id="chooseTickets" layoutX="240.0" layoutY="152.0" onAction="#handleChoice" prefHeight="26.0" prefWidth="110.0">
+                     <items>
+                        <FXCollections fx:factory="observableArrayList">
+                           <String fx:value="0" />
+                           <String fx:value="1" />
+                           <String fx:value="2" />
+                           <String fx:value="3" />
+                           <String fx:value="4" />
+                           <String fx:value="5" />
+                           <String fx:value="6" />
+                           <String fx:value="7" />
+                           <String fx:value="8" />
+                           <String fx:value="9" />
+                           <String fx:value="10" />
+                        </FXCollections>
+                     </items>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXComboBox>
+                  <Label fx:id="ticketPrice" alignment="CENTER" layoutX="435.0" layoutY="148.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="54.0" text="£8.50" textFill="#020438">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Line endX="240.0" layoutX="254.0" layoutY="190.0" startX="-200.0" stroke="#182131" strokeWidth="1.5" />
+                  
+                  <!-- discount -->
+                  <Label layoutX="61.0" layoutY="194.0" prefHeight="40.0" prefWidth="117.0" text="Discount" textFill="#020438">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="discountLabel" layoutX="419.0" layoutY="194.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="70.0" text="- 0%" textFill="#020438">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Line endX="240.0" layoutX="254.0" layoutY="238.0" startX="-200.0" stroke="#182131" strokeWidth="1" />
+                  <!-- discount -->
+                  
+                   <!-- total -->
+                  <Label layoutX="61.0" layoutY="240.0" prefHeight="47.0" prefWidth="88.0" text="Total" textFill="#020438">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ticketPriceLabel" layoutX="419.0" layoutY="240.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="47.0" prefWidth="70.0" textFill="#020438">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <Line endX="240.0" layoutX="254.0" layoutY="285.0" startX="-200.0" stroke="#182131" strokeWidth="1" />
+                  <!-- total -->
+                  
+                  <!-- error label -->
+                  <Label fx:id="errorlabel" alignment="CENTER" contentDisplay="CENTER" layoutX="1.0" layoutY="380.0" prefHeight="89.0" prefWidth="520.0" textAlignment="CENTER" textFill="#d21a1a" wrapText="true">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <!-- error label-->
+                  
+                  <JFXButton fx:id="checkoutbtn" buttonType="RAISED" layoutX="335.0" layoutY="489.0" onAction="#continuePayment" prefHeight="50.0" prefWidth="160.0" style="-fx-background-color: #68AE00; -fx-background-radius: 2;" text="Checkout" textFill="WHITE">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <Label layoutX="40.0" layoutY="30.0" text="Select Ticket" textFill="#020438" underline="true">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="27.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="selectSeats" buttonType="RAISED" layoutX="157.0" layoutY="489.0" onAction="#seatsBtn" prefHeight="50.0" prefWidth="160.0" style="-fx-background-color: #ff4444; -fx-background-radius: 2;" text="Select seats" textFill="WHITE">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="moviePane" layoutX="570.0" layoutY="77.0" prefHeight="580.0" prefWidth="356.0" style="-fx-background-color: #e7e6e1;" styleClass="tiles">
+               <children>
+                  <Label layoutX="40.0" layoutY="249.0" prefHeight="40.0" prefWidth="195.0" text="Selected movie" textFill="#020438">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="movieLabel" layoutX="40.0" layoutY="290.0" prefHeight="27.0" prefWidth="273.0" text="Name:" textFill="#020438">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="cinemalabel" layoutX="40.0" layoutY="332.0" prefHeight="27.0" prefWidth="273.0" text="Cinema:" textFill="#020438">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="datelabel" layoutX="40.0" layoutY="379.0" prefHeight="27.0" prefWidth="273.0" text="Date:" textFill="#020438">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="timelabel" layoutX="40.0" layoutY="426.0" prefHeight="27.0" prefWidth="273.0" text="Time:" textFill="#020438">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="movieImage" fitHeight="246.0" fitWidth="155.0" layoutX="101.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../../cserv1_a/soc_ug/ll15n3d/Desktop/project/client/src/GUI/View/images/blackpanther.jpg" />
+                     </image>
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" color="#574d4d" height="20.0" radius="9.5" width="20.0" />
+                     </effect>
+                  </ImageView>
+                  <Line endX="170.0" layoutX="140.0" layoutY="324.0" startX="-100.0" stroke="#182131" strokeWidth="1" />
+                  <Line endX="170.0" layoutX="140.0" layoutY="370.0" startX="-100.0" stroke="#182131" strokeWidth="1" />
+                  <Line endX="170.0" layoutX="140.0" layoutY="417.0" startX="-100.0" stroke="#182131" strokeWidth="1" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="toppane" prefHeight="35.0" prefWidth="950.0" style="-fx-background-color: #182131;">
+               <children>
+                  <Label layoutX="380.0" layoutY="5.0" text="Buy tickets" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="TICKET" size="20" />
+                     </graphic>
+                  </Label>
+                  <HBox layoutX="880.0" prefHeight="35.0">
+                     <children>
+                        <JFXButton fx:id="minimisebtn" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#minimiseWindow" prefHeight="35.0" prefWidth="35.0" ripplerFill="WHITE" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="MINUS" size="20" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="closebtn" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleClose" prefHeight="35.0" prefWidth="35.0" ripplerFill="WHITE">
+                           <graphic>
+                              <MaterialDesignIconView fill="WHITE" glyphName="CLOSE" size="24" />
+                           </graphic>
+                           <cursor>
+                                <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

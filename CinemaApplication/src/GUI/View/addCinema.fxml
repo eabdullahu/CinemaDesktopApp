@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainhomepane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.View.addCinemaController">
+   <children>
+      <AnchorPane fx:id="leftpane" prefHeight="700.0" prefWidth="250.0" style="-fx-background-color: #182131;">
+         <children>
+             
+             <JFXButton fx:id="homebtn" alignment="TOP_LEFT" graphicTextGap="20.0" layoutX="10.0" layoutY="130.0" onAction="#loadScene" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="40.0" prefWidth="230.0" text="Home" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="HOME" size="20" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            
+            <JFXButton fx:id="cinemabtn" alignment="TOP_LEFT" graphicTextGap="20.0" layoutX="10.0" layoutY="180.0" onAction="#loadScene" onMouseEntered="#btnHover" onMouseExited="#btnExit" opacity="0.8" prefHeight="40.0" prefWidth="230.0" text="Cinemas" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="THEATER" size="20" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="hallsbtn" alignment="TOP_LEFT" graphicTextGap="20.0" layoutX="10.0" layoutY="230.0" onAction="#loadScene" onMouseEntered="#btnHover" onMouseExited="#btnExit" opacity="0.8" prefHeight="40.0" prefWidth="230.0" text="Halls" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="DOMAIN" size="20" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="moviesbtn" alignment="TOP_LEFT" graphicTextGap="20.0" layoutX="10.0" layoutY="280.0" onAction="#loadScene" onMouseEntered="#btnHover" onMouseExited="#btnExit" opacity="0.8" prefHeight="40.0" prefWidth="230.0" text="Movies" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="MOVIE" size="20" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            
+            <!-- add ticket, admini -->
+            
+            <JFXButton fx:id="ticketsbtn" alignment="TOP_LEFT" graphicTextGap="20.0" layoutX="10.0" layoutY="330.0" onAction="#loadScene" onMouseEntered="#btnHover" onMouseExited="#btnExit" opacity="0.8" prefHeight="40.0" prefWidth="230.0" text="Tickets" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="TICKET" size="20" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="usersbtn" alignment="TOP_LEFT" graphicTextGap="20.0" layoutX="10.0" layoutY="380.0" onAction="#loadScene" onMouseEntered="#btnHover" onMouseExited="#btnExit" opacity="0.8" prefHeight="40.0" prefWidth="230.0" text="Users" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="ACCOUNT_CIRCLE" size="20" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            
+            <!-- add ticket, admini -->
+            
+            <JFXButton fx:id="contactbtn" alignment="TOP_LEFT" graphicTextGap="20.0" layoutX="10.0" layoutY="430.0" onAction="#loadScene" onMouseEntered="#btnHover" onMouseExited="#btnExit" opacity="0.8" prefHeight="40.0" prefWidth="230.0" text="Contact" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="CONTACT_MAIL" size="20" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="editProfileBtn" alignment="TOP_LEFT" graphicTextGap="20.0" layoutX="10.0" layoutY="480.0" onMouseEntered="#btnHover" onMouseExited="#btnExit" opacity="0.8" prefHeight="40.0" prefWidth="230.0" text="Edit profile" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="ACCOUNT_CIRCLE" size="20" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="logoutbtn" alignment="TOP_LEFT" graphicTextGap="20.0" layoutX="10.0" layoutY="530.0" onAction="#logOut" onMouseEntered="#btnHover" onMouseExited="#btnExit" opacity="0.8" prefHeight="40.0" prefWidth="230.0" text="Log Out" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="POWER" size="20" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            
+            
+            <Label layoutX="102.0" layoutY="29.0" text="CMS " textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Line endX="230.0" fill="WHITE" layoutX="10.0" layoutY="60.0" opacity="0.85" stroke="WHITE" strokeLineCap="ROUND" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="250.0" prefHeight="700.0" prefWidth="950.0">
+         <children>
+            <AnchorPane fx:id="toppane" layoutY="-3.0" prefHeight="35.0" prefWidth="950.0" style="-fx-background-color: #182131;">
+               <children>
+                  <Label layoutX="407.0" layoutY="5.0" text="Cinema" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="THEATER" size="20" />
+                     </graphic>
+                  </Label>
+                  <HBox layoutX="880.0" prefHeight="35.0">
+                     <children>
+                        <JFXButton fx:id="minimisebtn" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#minimiseWindow" prefHeight="35.0" prefWidth="35.0" ripplerFill="WHITE" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="MINUS" size="20" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="closebtn" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleClose" prefHeight="35.0" prefWidth="35.0" ripplerFill="WHITE">
+                           <graphic>
+                              <MaterialDesignIconView fill="WHITE" glyphName="CLOSE" size="24" />
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="45.0" layoutY="55.0" prefHeight="623.0" prefWidth="530.0" styleClass="tiles">
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" height="1.0" radius="0.0" width="0.5" />
+               </effect>
+                <FlowPane xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+                    <children>
+                        <JFXTreeTableView fx:id="treeView" onMouseClicked="#updateFields" prefHeight="603.0" prefWidth="563.0" />
+                    </children>
+                </FlowPane>
+            </AnchorPane>
+            <JFXButton fx:id="editbtn" layoutX="626.0" layoutY="436.0" onAction="#edit" prefHeight="50.0" prefWidth="130.0" style="-fx-background-color: #ff4444;" text="Update" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+                <cursor>
+                  <Cursor fx:constant="HAND" />
+                </cursor>
+            </JFXButton>
+            <JFXButton layoutX="769.0" layoutY="436.0" onAction="#deleteCinema" prefHeight="50.0" prefWidth="130.0" style="-fx-background-color: #182131; -fx-border-radius: 3;" text="Delete" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+                <cursor>
+                  <Cursor fx:constant="HAND" />
+                </cursor>
+            </JFXButton>
+            <JFXTextField fx:id="cinemaNameField" layoutX="625.0" layoutY="155.0" prefHeight="40.0" prefWidth="274.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="cinemaLocationField" layoutX="625.0" layoutY="247.0" prefHeight="40.0" prefWidth="274.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="CinemaTelField" layoutX="625.0" layoutY="329.0" prefHeight="40.0" prefWidth="274.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="625.0" layoutY="138.0" text="Cinema Name:">
+               <font>
+                  <Font name="Roboto Light" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="624.0" layoutY="227.0" text="Cinema locatiom:">
+               <font>
+                  <Font name="Roboto Light" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="624.0" layoutY="312.0" text="Cinema Telephone:">
+               <font>
+                  <Font name="Roboto Light" size="12.0" />
+               </font>
+            </Label>
+            <JFXButton ellipsisString="" layoutX="818.0" layoutY="90.0" onAction="#clearFields" prefHeight="35.0" prefWidth="78.0" style="-fx-background-color: #e3e3e3;" text="Clear">
+               <graphic>
+                  <MaterialDesignIconView fill="BLACK" glyphName="CLOSE" size="24" />
+               </graphic>
+            </JFXButton>
+            <Label layoutX="624.0" layoutY="99.0" prefHeight="17.0" prefWidth="84.0" text="Selectet Row:">
+               <font>
+                  <Font name="Roboto Light" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="rowSelectedField" ellipsisString="" layoutX="703.0" layoutY="95.0" prefHeight="27.0" prefWidth="35.0" style="-fx-background-color: #e8e8e8;">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

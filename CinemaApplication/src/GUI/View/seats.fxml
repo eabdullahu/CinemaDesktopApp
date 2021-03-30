@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainpane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="385.0" prefWidth="710.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.View.seatsController">
+   <children>
+      <AnchorPane fx:id="toppane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" style="-fx-background-color: #182131;">
+         <children>
+            <Label layoutX="10.0" layoutY="4.0" text="Select seats" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="closebtn" contentDisplay="GRAPHIC_ONLY" layoutX="675.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleClose" prefHeight="35.0" prefWidth="35.0" ripplerFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="35.0" prefHeight="350.0" prefWidth="710.0" style="-fx-background-color: #E7E6E1;">
+         <children>
+            <ScrollPane fx:id="scrollPane" layoutX="20.0" layoutY="10.0" prefHeight="230.0" prefWidth="670.0" styleClass="edge-to-edge">
+                <GridPane fx:id="grid" GridPane.halignment="CENTER" />
+            </ScrollPane>
+            <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="20.0" layoutY="250.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: #8EA6B4; -fx-background-radius: 5;" text="Button" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="20.0" layoutY="281.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: #4A772F; -fx-background-radius: 5;" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="20.0" layoutY="312.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: #C40018; -fx-background-radius: 5;" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="69.0" layoutY="253.0" text="Available" textFill="#182131">
+               <font>
+                  <Font name="Microsoft Sans Serif" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="69.0" layoutY="283.0" text="Selected" textFill="#182131">
+               <font>
+                  <Font name="Microsoft Sans Serif" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="69.0" layoutY="315.0" text="Sold" textFill="#182131">
+               <font>
+                  <Font name="Microsoft Sans Serif" size="17.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="cancelbtn" buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="5.0" layoutX="540.0" layoutY="269.0" onAction="#handleCancellation" prefHeight="48.0" prefWidth="150.0" style="-fx-background-color: #d21a1a; -fx-background-radius: 2;" text="Cancel" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="confirmbtn" buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="5.0" layoutX="373.0" layoutY="269.0" onAction="#handleConfirmation" prefHeight="48.0" prefWidth="150.0" style="-fx-background-color: #68AE00; -fx-background-radius: 2;" text="Confirm Seats" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label fx:id="limiterror" layoutX="263.0" layoutY="280.0" text="Max Seat Limit Reached" textFill="#c40018" visible="false">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

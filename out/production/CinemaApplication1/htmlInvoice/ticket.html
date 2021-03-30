@@ -1,0 +1,124 @@
+<html>
+<head>
+<title>Ticket receipt</title>
+</head>
+<style>
+body {
+font-family: sans-serif; 
+ display: flex;
+width: 100%;
+height: 100%;
+justify-content: center;
+align-items: center}
+.receiptContainer {
+width:478px;
+height: 150px;
+background-color: #FFF;
+padding: 10px; 
+border:1px solid rgba(71,185,234, 0.3);
+}
+.receiptContainer #first {
+display:inline-block; 
+width: 150px;
+}
+.receiptContainer #first h5{
+font-weight: 700; 
+margin: 0; 
+text-align: center;
+}
+
+.receiptContainer #second {
+display:inline-block;
+width: 320px; 
+height:100%; 
+border-left: 3px dashed #ccc;
+}
+.receiptContainer #second h3 {
+font-weight: 600; 
+margin: 0; 
+color: #FFF; 
+margin-left: 10px;
+text-align: center;
+background:#47b9ea;
+padding: 5px 0;
+}
+
+table {
+border-collapse: separate;
+font-size: 14px;
+padding: 10px;
+width: 100%;
+}
+table tr .td1{
+font-weight: 600;
+opacity: 0.9;
+padding-left: 10px;
+}
+table tr .td2{
+color: #47b9ea;
+font-weight: 700;
+text-align: right;
+padding-left: 0;
+}
+table tr .td1new{ 
+font-weight: 500;
+font-size: 12px;
+text-align: center;
+}
+</style>
+<body>
+<div class="receiptContainer">
+<div id="first">
+<h5>ONLINE TICKET</h5>
+<table>
+<tr>
+<td class="td2">ROW</td>
+<td class="td1">C</td>
+</tr>
+<tr>
+<td class="td2">SEAT</td>
+<td class="td1">12</td>
+</tr>
+<tr>
+<td class="td2">DATE</td>
+<td class="td1">18-06-2020</td>
+</tr>
+<tr>
+<td class="td2">TIME</td>
+<td class="td1">20:45:00</td>
+</tr>
+<tr>
+<td class="td2">PRICE</td>
+<td class="td1">51.00&euro;</td>
+</tr>
+</table>
+</div>
+<div id="second">
+<h3>&#10026; MOVIE NAME</h3>
+<table>
+<tr>
+<td class="td2">ROW</td>
+<td class="td1">C</td>
+<td class="td2">SEAT</td>
+<td class="td1">12</td>
+</tr>
+<tr>
+<td class="td2">DATE</td>
+<td class="td1">18-06-2020</td>
+<td class="td2">TIME</td>
+<td class="td1">20:45:00</td>
+</tr>
+<tr>
+<td class="td2">Hall</td>
+<td class="td1">Salla 2</td>
+<td class="td2">PRICE</td>
+<td class="td1">51.00&euro;</td>
+</tr>
+<tr>
+<td class="td1 td1new" colspan="4">E1_20200625_312</td>
+</tr>
+</table>
+</div>
+</div>
+</body>
+</html>
